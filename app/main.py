@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.api.endpoints import balance, history
+from app.api.routes import balance, history
 
 app = FastAPI()
 
