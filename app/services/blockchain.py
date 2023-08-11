@@ -1,11 +1,32 @@
+import datetime
 from web3 import Web3
 from app.settings import ETHEREUM_NODE_URL
 import requests
-
+from decouple import config
 web3 = Web3(Web3.HTTPProvider(ETHEREUM_NODE_URL))
 
 TOKEN_CONTRACT_ADDRESS = "0xD533a949740bb3306d119CC777fa900bA034cd52"
-ABI = [...]  # Add the ABI of the CRV token contract here
+ABI = [
+    {
+        "constant": False,
+        "inputs": [...],  # Replace with actual input parameters
+        "name": "joinPonzi",
+        "outputs": [...],  # Replace with actual output parameters
+        "payable": True,
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "constant": False,
+        "inputs": [...],  # Replace with actual input parameters
+        "name": "buyOwnerRole",
+        "outputs": [...],  # Replace with actual output parameters
+        "payable": True,
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    # ... other functions ...
+]
 
 COINGECKO_API_URL = "https://api.coingecko.com/api/v3"
 TOKEN_ID = "ethereum"
