@@ -7,3 +7,4 @@ httpx==0.21.0
 motor==2.5.0
 requests==2.26.0
 python-decouple==3.6
+jinja2==3.0.2

@@ -1,0 +1,27 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Balance Checker</title>
+</head>
+<body>
+    <h1>Token Balance Checker</h1>
+    <form action="/api/v1/balance" method="get">
+        <label for="wallet">Wallet Address:</label>
+        <input type="text" id="wallet" name="wallet" required>
+        <button type="submit">Check Balance</button>
+    </form>
+
+    {% if result %}
+    <h2>Balance Information</h2>
+    <p>Wallet: {{ result.wallet }}</p>
+    <p>Timestamp: {{ result.timestamp }}</p>
+    <p>Balance: {{ result.balance }}</p>
+    <p>Token Balance: {{ result.token_balance }}</p>
+    <p>Token Balance USD: {{ result.token_balance_usd }}</p>
+    {% endif %}
+</body>
+</html>
