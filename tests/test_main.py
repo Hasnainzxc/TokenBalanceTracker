@@ -4,7 +4,7 @@ from app.api.main import app
 client = TestClient(app)
 
 def test_fetch_balance():
-    response = client.get("/api/v1/balance/0xYOUR_WALLET_ADDRESS")
+ 
     assert response.status_code == 200
     data = response.json()
     assert "wallet" in data
